@@ -42,10 +42,14 @@ Given the database structure, here is the query that answers [QUESTION]{question
 
 code_template = """
 import os
+import sys
+print("Python executable being used:")
+print(sys.executable)
 import pandas as pd
 from dotenv import load_dotenv
 import matplotlib.pyplot as plt
 from sqlalchemy import create_engine
+
 
 
 load_dotenv('existing/{database}/.env', override=True, verbose=True)

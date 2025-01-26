@@ -35,6 +35,9 @@ class Plotter:
             'question': question,
             'schema': schema,
             'dbms': dbms
+
+
+            
         }).content
 
         if dbms.startswith('Oracle'):
@@ -80,6 +83,7 @@ class Plotter:
         # result = subprocess.run(['python', file_path], stderr=subprocess.PIPE)
         # Using venv python
         result = subprocess.run(["../../venv/Scripts/python.exe", 'plot.py'], stderr=subprocess.PIPE)
+        main
         os.remove(file_path)
 
         print(result.stderr.decode('windows-1252'))
